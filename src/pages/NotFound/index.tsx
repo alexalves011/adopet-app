@@ -1,8 +1,7 @@
-import React from 'react';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router';
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
 	const navigate = useNavigate();
 	return (
 		<div className='flex flex-col items-center justify-center'>
