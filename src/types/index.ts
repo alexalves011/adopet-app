@@ -5,7 +5,7 @@ export interface Pet {
   details: string;
   location: string;
   description: string;
-  image?: string ;
+  image?: string;
 }
 
 export interface User {
@@ -16,3 +16,9 @@ export interface User {
   city?: string;
   about?: string;
 }
+
+export type UserLogin = Pick<User, "email"> & { password: string };
+export type UserRegister = Omit<User, "id" | "phone" | "city" | "about"> & {
+  password: string;
+  confirmPassword: string;
+};
